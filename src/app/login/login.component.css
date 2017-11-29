@@ -2,3 +2,9 @@
 form {
   padding-top: 20px;
 }
+
+.form-control {
+  margin: 0 auto;
+  text-align: left;
+  width: 30%;
+}
