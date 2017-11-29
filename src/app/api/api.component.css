@@ -1,0 +1,37 @@
+.btn {
+  background-color: lightgrey;
+}
+
+#urlField {
+  margin: 0 auto;
+  text-align: left;
+  width: 60%;
+}
+
+#requestMsgLabel {
+  width: 60%;
+}
+#requestBody {
+  margin: 0 auto;
+  text-align: left;
+  width: 60%;
+  height: 200px;
+  background-color: lightblue;
+}
+
+#returnValueLabel {
+  padding-top: 15px;
+  width: 60%;
+}
+#returnValue {
+  margin: 0 auto;
+  text-align: left;
+  width: 60%;
+  height: 200px;
+  font-size: 10pt;
+  background-color: lightblue;
+}
+
+.pad {
+  padding-top: 20px;
+}

@@ -1,0 +1,16 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+  <div>
+    <button id="homeBtn" class="btn btn-primary" (click)="goHome()">Home</button>
+    <button id="loginBtn" class="btn btn-primary" (click)="goLogin()">Login</button>
+    <button id="searchBtn" class="btn btn-primary" (click)="goSearch()">Search</button>
+    <button id="apiBtn" class="btn btn-primary" (click)="goApi()">API Tool</button>
+
+  </div>
+
+  <div class="appRouter">
+    <router-outlet></router-outlet>
+  </div>
+</div>
