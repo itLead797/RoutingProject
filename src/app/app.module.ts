@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './search/search.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LoginService } from './services/login/login.service';
+import { FileService } from './services/file/file.service';
 import { ApiComponent } from './api/api.component';
 
 export const ROUTES: Routes = [
@@ -34,7 +35,10 @@ export const ROUTES: Routes = [
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [LoginService],
+  providers: [
+    LoginService,
+    FileService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

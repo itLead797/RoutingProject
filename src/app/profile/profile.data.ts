@@ -6,6 +6,6 @@ export const PROFILEDATA: ProfileModel[] = [
     'lastName': 'Price',
     'team': 'Phoenix',
     'train': 'solutions',
-    'imageUrl': '../assets/img.jpg';
+    'imageUrl': '../assets/img.jpg'
   }
 ];
