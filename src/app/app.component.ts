@@ -25,6 +25,9 @@ export class AppComponent {
 
   goApi() {
     this.router.navigate(['./api']);
+  }
 
+  goProfiles() {
+    this.router.navigate(['./profiles']);
   }
 }

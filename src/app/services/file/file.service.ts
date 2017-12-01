@@ -26,6 +26,7 @@ export class FileService {
         return;
       }
       console.log('Path is: ' + path);
+
     });
     fs.readdir(__dirname, function (err, files) {
       if (err) { return; }

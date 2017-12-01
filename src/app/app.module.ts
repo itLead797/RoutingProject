@@ -18,7 +18,8 @@ export const ROUTES: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'search', component: SearchComponent},
   {path: 'profile/:username', component: ProfileComponent},
-  {path: 'api', component: ApiComponent}
+  {path: 'api', component: ApiComponent},
+  {path: 'profiles', component: ProfileComponent}
 ];
 @NgModule({
   declarations: [
