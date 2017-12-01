@@ -39,6 +39,7 @@ export class FileService {
     // console.log(files);
   }
 
+  // https://www.npmjs.com/package/jsonfile
   public writeFile() {
     let jsonfile = require('jsonfile');
     let file = '/tmp/data.json';
