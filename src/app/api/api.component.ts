@@ -1,5 +1,5 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { Http, HttpModule } from '@angular/http';
+import { Http, HttpModule, URLSearchParams } from '@angular/http';
 import { RequestModel } from './request.model';
 @Component({
   selector: 'app-api',
@@ -14,11 +14,15 @@ export class ApiComponent implements OnInit {
   constructor(private http: Http) { }
 
     ngOnInit() {
+      this.request.url = 'http://httpbin.org';
+      this.request.body = '{ param1: data1, param2: data2 }';
     }
 
     onGet() {
       this.response = '';
       let url: string = this.request.url + '/get';
+     // let search = new URLSearchParams();
+     // search.set(this.request.body);
       this.http.get(url).subscribe(
         res => this.response = res.text(),
         msg => this.response = msg.status + ': ' + msg.statusText
@@ -27,7 +31,15 @@ export class ApiComponent implements OnInit {
 
     onPost() {
       console.log('POST');
-      console.log(this.request);
+      this.response = '';
+      let url: string = this.request.url + '/get';
+      let search = new URLSearchParams();
+      search.set('foo', 'moo');
+     // search.set('limit', 25);
+      this.http.post(url, 'foo', 'moo').subscribe(
+        res => this.response = res.text(),
+        msg => this.response = msg.status + ': ' + msg.statusText
+      );
     }
 
     onPut() {

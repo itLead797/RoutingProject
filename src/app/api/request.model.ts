@@ -1,4 +1,4 @@
 export class RequestModel {
   url: string;
-  body: object;
+  body: string;
 }
