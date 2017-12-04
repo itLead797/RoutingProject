@@ -3,8 +3,24 @@ form {
   padding-top: 20px;
 }
 
-.form-control {
+h3 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.form-group {
   margin: 0 auto;
   text-align: left;
   width: 30%;
+}
+
+.submitBtn {
+  padding-top: 10px;
+  text-align: center;
+
+}
+
+.testData {
+  padding-top: 10px;
+  text-align: center;
 }
