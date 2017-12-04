@@ -1,5 +1,5 @@
 import { ProfileModel } from './profile.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FileService } from '../services/file/file.service';
 
@@ -9,16 +9,29 @@ import { FileService } from '../services/file/file.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  @Input() submitted = false;
   username: string;
-  profiles: ProfileModel[] = [];
+  profile: ProfileModel[] = [];
+
+  model = new ProfileModel();
 
   constructor(private fileService: FileService) {
   }
 
   ngOnInit(): any {
-    this.profiles = this.fileService.getFiles();
-    console.log('Profile List' + this.profiles);
-    return this.profiles;
+    this.profile = this.fileService.getFiles();
+    // console.log('Profile List' + JSON.stringify(this.profile));
+    this.model = this.profile[0]; // see commented out ngOnInit
+    return this.profile;
+  }
+
+  onSubmit() {
+    this.submitted = true;
+    // for (let i = 0; i < this.loginData.length; i++) {
+    //   if (this.loginData[i].login === this.model.login && this.loginData[i].password === this.model.password) {
+    //     this.verified = true;
+    //   }
+    // }
   }
 
   // constructor(private route: ActivatedRoute) { }

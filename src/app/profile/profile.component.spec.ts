@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ProfileComponent } from './profile.component';
 import { FileService } from '../services/file/file.service';
+import { FormsModule } from '@angular/forms';
 
 describe('ProfileComponent', () => {
   let component: ProfileComponent;
@@ -11,7 +12,7 @@ describe('ProfileComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ ProfileComponent ],
       providers: [ FileService],
-      imports: [RouterTestingModule],
+      imports: [RouterTestingModule, FormsModule],
     })
     .compileComponents();
   }));

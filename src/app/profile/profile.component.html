@@ -1,6 +1,29 @@
 <p>
   profile works!
 </p>
+<!--
 <div class="profile">
   <h3>{{username}}</h3>
 </div>
+-->
+
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>First Name: </label>
+    <input type="text" id="firstNameFld" class="form-control" placeholder="login ID" name="firstName" [(ngModel)]="model.firstName">
+  </div>
+  <div class="form-group">
+    <label>Last Name:</label>
+    <input type="text" id="lastNameFld" class="form-control" placeholder="Password" name="lastName" [(ngModel)]="model.lastName">
+  </div>
+  <button type="submit" id="btnSubmit" class="btn btn-success" (click)="onSubmit()">
+    Submit</button>
+</form>
+
+<p></p>
+<div>firstName = {{model.firstName}}</div>
+<div>lastName = {{model.lastName}}</div>
+<div>team = {{model.team}}</div>
+<div>train = {{model.train}}</div>
+<div>imageUrl = {{model.imageUrl}}</div>
+
