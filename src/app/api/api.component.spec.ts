@@ -56,29 +56,39 @@ describe('ApiComponent', () => {
     button.click();
     fixture.detectChanges();
     expect(component.onGet).toHaveBeenCalled();
+    // console.log(component.response);
   }));
 
-  xit('should perform a POST', async(() => {
+  it('should perform a POST', async(() => {
     spyOn(component, 'onPost');
     let button = fixture.debugElement.query(By.css('#btnPost')).nativeElement;
+    // let input = fixture.debugElement.query(By.css('#requestBody')).nativeElement;
+    // input.value = 'foo';
+    // fixture.detectChanges();
     button.click();
     fixture.detectChanges();
-    expect(component.onGet).toHaveBeenCalled();
+    expect(component.onPost).toHaveBeenCalled();
   }));
 
-  xit('should perform a PUT', async(() => {
+  it('should perform a PUT', async(() => {
     spyOn(component, 'onPut');
     let button = fixture.debugElement.query(By.css('#btnPut')).nativeElement;
+    // let input = fixture.debugElement.query(By.css('#requestBody')).nativeElement;
+    // input.value = 'foo';
+    // fixture.detectChanges();
     button.click();
     fixture.detectChanges();
-    expect(component.onGet).toHaveBeenCalled();
+    expect(component.onPut).toHaveBeenCalled();
   }));
 
-  xit('should perform a DELETE', async(() => {
+  it('should perform a DELETE', async(() => {
     spyOn(component, 'onDelete');
     let button = fixture.debugElement.query(By.css('#btnDelete')).nativeElement;
+    // let input = fixture.debugElement.query(By.css('#requestBody')).nativeElement;
+    // input.value = 'foo';
+    // fixture.detectChanges();
     button.click();
     fixture.detectChanges();
-    expect(component.onGet).toHaveBeenCalled();
+    expect(component.onDelete).toHaveBeenCalled();
   }));
 });

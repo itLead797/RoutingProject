@@ -15,7 +15,7 @@ export class ApiComponent implements OnInit {
 
     ngOnInit() {
       this.request.url = 'http://httpbin.org';
-      this.request.body = '{ param1: data1, param2: data2 }';
+      this.request.body = ''; // '{ param1: data1, param2: data2 }';
     }
 
     onGet() {
@@ -32,23 +32,31 @@ export class ApiComponent implements OnInit {
     onPost() {
       console.log('POST');
       this.response = '';
-      let url: string = this.request.url + '/get';
-      let search = new URLSearchParams();
-      search.set('foo', 'moo');
-     // search.set('limit', 25);
-      this.http.post(url, 'foo', 'moo').subscribe(
+      let url: string = this.request.url + '/post';
+
+      this.http.post(url, this.request.body).subscribe(
         res => this.response = res.text(),
         msg => this.response = msg.status + ': ' + msg.statusText
       );
     }
 
     onPut() {
-      console.log('POST');
+      console.log('PUT');
       console.log(this.request);
+      let url: string = this.request.url + '/put';
+      this.http.post(url, this.request.body).subscribe(
+        res => this.response = res.text(),
+        msg => this.response = msg.status + ': ' + msg.statusText
+      );
     }
 
     onDelete() {
-      console.log('POST');
+      console.log('DELETE');
       console.log(this.request);
+      let url: string = this.request.url + '/delete';
+      this.http.post(url, this.request.body).subscribe(
+        res => this.response = res.text(),
+        msg => this.response = msg.status + ': ' + msg.statusText
+      );
     }
 }
