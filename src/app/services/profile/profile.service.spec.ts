@@ -1,21 +1,21 @@
 import { TestBed, inject } from '@angular/core/testing';
-import { ProfileModel } from '../../profile/profile.model';
-import { FileService } from './file.service';
+import { ProfileModel } from './profile.model';
+import { ProfileService } from './profile.service';
 
 
 describe('FileService', () => {
-let fileService: FileService;
+let fileService: ProfileService;
 
   beforeEach(() => {
-    fileService = new FileService();
+    fileService = new ProfileService();
 
     TestBed.configureTestingModule({
-      providers: [FileService],
+      providers: [ProfileService],
       imports: []
     });
   });
 
-  it('should be created', inject([FileService], (service: FileService) => {
+  it('should be created', inject([ProfileService], (service: ProfileService) => {
     expect(service).toBeTruthy();
   }));
 

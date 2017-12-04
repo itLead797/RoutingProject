@@ -1,7 +1,7 @@
-import { ProfileModel } from './profile.model';
+import { ProfileModel } from '../services/profile/profile.model';
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FileService } from '../services/file/file.service';
+import { ProfileService } from '../services/profile/profile.service';
 
 @Component({
   selector: 'app-profile',
@@ -15,7 +15,7 @@ export class ProfileComponent implements OnInit {
 
   model = new ProfileModel();
 
-  constructor(private fileService: FileService) {
+  constructor(private fileService: ProfileService) {
   }
 
   ngOnInit(): any {

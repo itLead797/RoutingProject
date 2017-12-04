@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { ProfileModel } from '../../profile/profile.model';
-import { PROFILEDATA } from '../../profile/profile.data';
+import { ProfileModel } from './profile.model';
+import { PROFILEDATA } from './profile.data';
 
 @Injectable()
-export class FileService {
+export class ProfileService {
   profiles: ProfileModel[];
 
   constructor() { }

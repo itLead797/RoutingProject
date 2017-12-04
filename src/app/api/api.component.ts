@@ -21,8 +21,8 @@ export class ApiComponent implements OnInit {
     onGet() {
       this.response = '';
       let url: string = this.request.url + '/get';
-     // let search = new URLSearchParams();
-     // search.set(this.request.body);
+      // let search = new URLSearchParams();
+      // search.set('field', this.request.body);
       this.http.get(url).subscribe(
         res => this.response = res.text(),
         msg => this.response = msg.status + ': ' + msg.statusText
