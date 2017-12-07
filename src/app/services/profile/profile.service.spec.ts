@@ -4,10 +4,10 @@ import { ProfileService } from './profile.service';
 
 
 describe('FileService', () => {
-let fileService: ProfileService;
+let profileService: ProfileService;
 
   beforeEach(() => {
-    fileService = new ProfileService();
+    profileService = new ProfileService();
 
     TestBed.configureTestingModule({
       providers: [ProfileService],
@@ -20,7 +20,7 @@ let fileService: ProfileService;
   }));
 
   it('should return an profile', () => {
-    let profiles = fileService.getFiles();
+    let profiles = profileService.getFiles();
 
      expect(profiles[0].firstName).toBeDefined();
      expect(profiles[0].lastName).toBeDefined();
