@@ -4,10 +4,10 @@ import { LessonService } from './lesson.service';
 
 
 describe('FileService', () => {
-let profileService: LessonService;
+let lessonService: LessonService;
 
   beforeEach(() => {
-    profileService = new LessonService();
+    lessonService = new LessonService();
 
     TestBed.configureTestingModule({
       providers: [LessonService],
@@ -20,13 +20,13 @@ let profileService: LessonService;
   }));
 
   it('should return an profile', () => {
-    let profiles = profileService.getFiles();
+    let lessons = lessonService.getFiles();
 
-     expect(profiles[0].subject).toBeDefined();
-     expect(profiles[0].level).toBeDefined();
-     expect(profiles[0].objective).toBeDefined();
-     expect(profiles[0].notes).toBeDefined();
-     expect(profiles[0].class).toBeDefined();
-     expect(profiles[0].references).toBeDefined();
+     expect(lessons[0].subject).toBeDefined();
+     expect(lessons[0].level).toBeDefined();
+     expect(lessons[0].objective).toBeDefined();
+     expect(lessons[0].notes).toBeDefined();
+     expect(lessons[0].class).toBeDefined();
+     expect(lessons[0].references).toBeDefined();
   });
 });
