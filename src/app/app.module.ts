@@ -10,9 +10,11 @@ import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './search/search.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ApiComponent } from './api/api.component';
+
 import { LoginService } from './services/login/login.service';
 import { ProfileService } from './services/profile/profile.service';
 import { LessonService } from './services/lesson/lesson.service';
+
 
 export const ROUTES: Routes = [
   {path: '', component: HomeComponent},
