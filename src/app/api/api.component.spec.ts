@@ -9,6 +9,7 @@ import { RequestModel } from './request.model';
 describe('ApiComponent', () => {
   let component: ApiComponent;
   let fixture: ComponentFixture<ApiComponent>;
+  let instance;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -21,6 +22,7 @@ describe('ApiComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ApiComponent);
     component = fixture.componentInstance;
+    instance = fixture.elementRef.nativeElement;
     fixture.detectChanges();
   });
 
@@ -29,7 +31,7 @@ describe('ApiComponent', () => {
   });
 
   it('should display api buttons', () => {
-    const instance = fixture.elementRef.nativeElement;
+    instance = fixture.elementRef.nativeElement;
     let button = instance.querySelector('#btnGet').textContent;
     expect(button).toBe('GET', 'button exists');
     button = instance.querySelector('#btnPost').textContent;
@@ -41,13 +43,29 @@ describe('ApiComponent', () => {
   });
 
   it('should accept a URL', () => {
-    const instance = fixture.elementRef.nativeElement;
+    instance = fixture.elementRef.nativeElement;
     let input = fixture.debugElement.query(By.css('#urlField')).nativeElement;
     input.value = 'http://google.com';
     fixture.detectChanges();
     const urlField = instance.querySelector('#urlField').value;
     expect(urlField).toBe('http://google.com', 'expect url value');
   });
+
+
+  // probably needs an obsurvable
+  xit('should display a response to a get command', async(() => {
+    spyOn(component, 'onGet');
+    component.ngOnInit();
+    fixture.detectChanges();
+    const button = fixture.debugElement.query(By.css('#btnGet')).nativeElement;
+    button.click();
+    fixture.whenStable().then(() => {
+      fixture.detectChanges();
+      console.log(component.response);
+    });
+  }));
+
+
 
 
   it('should perform a GET', async(() => {
