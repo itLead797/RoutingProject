@@ -1,7 +1,9 @@
 
   <h1>
-    {{title}}
+    <div this-here>{{title}}</div> <!-- attempting content projection-->
   </h1>
+
+
   <div class="row">
     <button id="homeBtn" class="btn btn-primary" (click)="goHome()">Home</button>
     <button id="loginBtn" class="btn btn-primary" (click)="goLogin()">Login</button>
@@ -15,3 +17,4 @@
   <div class="appRouter">
     <router-outlet></router-outlet>
   </div>
+
