@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { LoginService } from './services/login/login.service';
 import { ApiComponent } from './api/api.component';
+import { LogoComponent } from './logo/logo.component';
 
 
 
@@ -22,7 +23,8 @@ describe('AppComponent', () => {
         LoginComponent,
         SearchComponent,
         ProfileComponent,
-        ApiComponent
+        ApiComponent,
+        LogoComponent
       ],
       imports: [
         FormsModule,

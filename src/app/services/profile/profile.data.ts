@@ -5,7 +5,7 @@ export const PROFILEDATA: ProfileModel[] = [
     'firstName': 'Robert',
     'lastName': 'Price',
     'team': 'Phoenix',
-    'train': 'solutions',
+    'train': 'Solutions',
     'imageUrl': '../assets/img.jpg'
   },
   {

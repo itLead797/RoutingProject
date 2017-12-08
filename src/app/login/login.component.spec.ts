@@ -17,6 +17,7 @@ class loginServiceMock {
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
+  let instance;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -34,6 +35,7 @@ describe('LoginComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
+    instance = fixture.elementRef.nativeElement;
     fixture.detectChanges();
   });
 
@@ -50,7 +52,7 @@ describe('LoginComponent', () => {
     expect(component.verified).toBe(true, 'expect verified');
   });
 
-  it('should faile invalid login/password', () => {
+  it('should fail invalid login/password', () => {
     component.ngOnInit();
     component.model.login = 'robert';
     component.model.password = '1234';
@@ -62,7 +64,7 @@ describe('LoginComponent', () => {
 
   it('should create a blank login page', async(() => {
     spyOn(component, 'ngOnInit');
-    const instance = fixture.elementRef.nativeElement;
+    instance = fixture.elementRef.nativeElement;
     component.ngOnInit();
     fixture.detectChanges();
     expect(component.ngOnInit).toHaveBeenCalled();
@@ -75,7 +77,7 @@ describe('LoginComponent', () => {
   }));
 
   it('should accept entered data', async(() => {
-    const instance = fixture.elementRef.nativeElement;
+    instance = fixture.elementRef.nativeElement;
     let input = fixture.debugElement.query(By.css('#loginId')).nativeElement;
     input.value = 'william';
     input = fixture.debugElement.query(By.css('#password')).nativeElement;

@@ -15,11 +15,11 @@ export class ProfileComponent implements OnInit {
 
   model = new ProfileModel();
 
-  constructor(private fileService: ProfileService) {
+  constructor(private profileService: ProfileService) {
   }
 
   ngOnInit(): any {
-    this.profile = this.fileService.getFiles();
+    this.profile = this.profileService.getFiles();
     // console.log('Profile List' + JSON.stringify(this.profile));
     this.model = this.profile[0]; // see commented out ngOnInit
     return this.profile;
