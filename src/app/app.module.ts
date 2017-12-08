@@ -14,6 +14,7 @@ import { ApiComponent } from './api/api.component';
 import { LoginService } from './services/login/login.service';
 import { ProfileService } from './services/profile/profile.service';
 import { LessonService } from './services/lesson/lesson.service';
+import { LogoComponent } from './logo/logo.component';
 
 
 export const ROUTES: Routes = [
@@ -31,7 +32,8 @@ export const ROUTES: Routes = [
     LoginComponent,
     SearchComponent,
     ProfileComponent,
-    ApiComponent
+    ApiComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,
