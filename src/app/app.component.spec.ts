@@ -1,7 +1,7 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, fakeAsync, tick } from '@angular/core/testing';
 import { FormsModule, FormGroup, ReactiveFormsModule, FormControl } from '@angular/forms';
-import { APP_BASE_HREF } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
+import { APP_BASE_HREF, Location } from '@angular/common';
+import { Routes, RouterModule, Router } from '@angular/router';
 import { ROUTES } from './app.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -15,6 +15,10 @@ import { LogoComponent } from './logo/logo.component';
 
 
 describe('AppComponent', () => {
+  let location: Location;
+  let router: Router;
+  let fixture;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
@@ -52,4 +56,7 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('My app');
   }));
+
+
+
 });

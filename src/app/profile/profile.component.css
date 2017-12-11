@@ -8,10 +8,15 @@ h3 {
   text-align: center;
 }
 
+div.centered table {
+  margin: 0 auto;
+  text-align: left;
+}
+
 .form-group {
   margin: 0 auto;
   text-align: left;
-  width: 30%;
+  width: 200px;
 }
 
 .submitBtn {
@@ -23,4 +28,19 @@ h3 {
 .testData {
   padding-top: 10px;
   text-align: center;
+}
+
+img {
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+  padding:1px;
+  border:1px solid #024002;
+  background-color:rgb(38, 0, 255);
+
 }

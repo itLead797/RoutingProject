@@ -8,32 +8,63 @@
 -->
 
 <form (ngSubmit)="onSubmit()">
-  <div class="form-group">
-    <label>First Name: </label>
-    <input type="text" id="firstNameFld" class="form-control" placeholder="First Name" name="firstName" [(ngModel)]="model.firstName"
-    />
-  </div>
-  <div class="form-group">
-    <label>Last Name:</label>
-    <input type="text" id="lastNameFld" class="form-control" placeholder="Last Name" name="lastName" [(ngModel)]="model.lastName"
-    />
-  </div>
-  <div class="form-group">
-    <label>Team:</label>
-    <input type="text" id="teamFld" class="form-control" placeholder="Team" name="team" [(ngModel)]="model.team"/>
-  </div>
-  <div class="form-group">
-    <label>Train:</label>
-    <input type="text" id="trainFld" class="form-control" placeholder="Train" name="train" [(ngModel)]="model.train"/>
-  </div>
+  <img src="../../assets/profileImg.jpg" />
 
+  <div class="centered">
+    <table>
+      <tr>
+        <td>
+          <div class="form-group">
+            <label>First Name: </label>
+            <input type="text" id="firstNameFld" class="form-control"
+            placeholder="First Name"
+            name="firstName"
+            [(ngModel)]="model.firstName"
+            />
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <label>Last Name:</label>
+            <input type="text" id="lastNameFld" class="form-control"
+            placeholder="Last Name"
+            name="lastName"
+            [(ngModel)]="model.lastName"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-group">
+            <label>Team:</label>
+            <input type="text" id="teamFld" class="form-control"
+            placeholder="Team"
+            name="team"
+            [(ngModel)]="model.team"
+            />
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <label>Train:</label>
+            <input type="text" id="trainFld" class="form-control"
+            placeholder="Train"
+            name="train"
+            [(ngModel)]="model.train"
+            />
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
   <div class=submitBtn>
     <button type="submit" id="btnSubmit" class="btn btn-success" (click)="onSubmit()">Submit</button>
   </div>
-
 </form>
 
-<app-logo></app-logo> <!-- presentation component -->
+<app-logo></app-logo>
+<!-- presentation component -->
 
 <p></p>
 <div class="testData">
