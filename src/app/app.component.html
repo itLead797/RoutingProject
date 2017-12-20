@@ -1,16 +1,16 @@
 
   <h1>
-    <div this-here>{{title}}</div> <!-- attempting content projection-->
+    <div>{{title}}</div>
   </h1>
 
 
   <div class="row">
-    <button id="homeBtn" class="btn btn-primary" (click)="goHome()">Home</button>
-    <button id="loginBtn" class="btn btn-primary" (click)="goLogin()">Login</button>
-    <button id="apiBtn" class="btn btn-primary" (click)="goApi()">API Tool</button>
-    <button id="searchBtn" class="btn btn-primary" (click)="goSearch()">Search</button>
-    <button id="profilesBtn" class="btn btn-primary" (click)="goProfiles()">Profiles</button>
-
+    <button id="homeBtn" class="btn btn-primary" [routerLink]="['home']">Home</button>
+    <button id="loginBtn" class="btn btn-primary" [routerLink]="['login']">Login</button>
+    <button id="apiBtn" class="btn btn-primary" [routerLink]="['api']">API Tool</button>
+    <button id="searchBtn" class="btn btn-primary" [routerLink]="['search']">Search</button>
+    <button id="profilesBtn" class="btn btn-primary" [routerLink]="['profiles']">Profiles</button>
+    <!-- router link replaced ... (click)="goLogin()" -->
   </div>
 
   <!-- display of routed pages -->
