@@ -13,11 +13,12 @@ import { ApiComponent } from './api/api.component';
 import { LogoComponent } from './logo/logo.component';
 
 
-
 describe('AppComponent', () => {
   let location: Location;
   let router: Router;
   let fixture;
+  let component;
+  let instance;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -39,24 +40,73 @@ describe('AppComponent', () => {
         {provide: APP_BASE_HREF, useValue : '/' }
       ]
     }).compileComponents();
+
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.debugElement.componentInstance;
+    instance = fixture.debugElement.nativeElement;
+
   }));
+
   it('should create the app', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   }));
+
   it(`should have as title 'app'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('My app');
+    expect(component.title).toEqual('My app');
   }));
+
   it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('My app');
+    expect(instance.querySelector('h1').textContent).toContain('My app');
   }));
 
+  it('should render the HOME button and call the page', async(() => {
+    spyOn(component, 'goHome');
+    fixture.detectChanges();
+    let button = instance.querySelector('#homeBtn');
+    expect(button.textContent).toContain('Home');
+    button.click();
+    fixture.detectChanges();
+    expect(component.goHome).toHaveBeenCalled();
+  }));
 
+  it('should render the LOGIN button and call the page', async(() => {
+    spyOn(component, 'goLogin');
+    fixture.detectChanges();
+    let button = instance.querySelector('#loginBtn');
+    expect(button.textContent).toContain('Login');
+    button.click();
+    fixture.detectChanges();
+    expect(component.goLogin).toHaveBeenCalled();
+  }));
 
+  it('should render the API-TOOL button and call the page', async(() => {
+    spyOn(component, 'goApi');
+    fixture.detectChanges();
+    let button = instance.querySelector('#apiBtn');
+    expect(button.textContent).toContain('API Tool');
+    button.click();
+    fixture.detectChanges();
+    expect(component.goApi).toHaveBeenCalled();
+  }));
+
+  it('should render the SEARCH button and call the page', async(() => {
+    spyOn(component, 'goSearch');
+    fixture.detectChanges();
+    let button = instance.querySelector('#searchBtn');
+    expect(button.textContent).toContain('Search');
+    button.click();
+    fixture.detectChanges();
+    expect(component.goSearch).toHaveBeenCalled();
+  }));
+
+  it('should render the PROFILES button and call the page', async(() => {
+    spyOn(component, 'goProfiles');
+    fixture.detectChanges();
+    let button = instance.querySelector('#profilesBtn');
+    expect(button.textContent).toContain('Profiles');
+    button.click();
+    fixture.detectChanges();
+    expect(component.goProfiles).toHaveBeenCalled();
+  }));
 });
