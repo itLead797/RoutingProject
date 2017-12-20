@@ -19,7 +19,7 @@ describe('LoginService', () => {
 
   it('service should retreive login data', () => {
     const data: LoginModel[] = loginService.getLoginData();
-    expect(data.length).toEqual(1);
+    expect(data.length).toBeGreaterThan(0);
     expect(data[0].login).toBe('robert');
     expect(data[0].password).toBe('1234');
   });
