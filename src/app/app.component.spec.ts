@@ -64,7 +64,7 @@ describe('AppComponent', () => {
     spyOn(component, 'goHome');
     fixture.detectChanges();
     let button = instance.querySelector('#homeBtn');
-    expect(button.textContent).toContain('Home');
+    expect(button.textContent).toContain('Home', 'button renders');
     button.click();
     fixture.detectChanges();
     expect(component.goHome).toHaveBeenCalled();
@@ -74,7 +74,7 @@ describe('AppComponent', () => {
     spyOn(component, 'goLogin');
     fixture.detectChanges();
     let button = instance.querySelector('#loginBtn');
-    expect(button.textContent).toContain('Login');
+    expect(button.textContent).toContain('Login', 'button renders');
     button.click();
     fixture.detectChanges();
     expect(component.goLogin).toHaveBeenCalled();
@@ -84,7 +84,7 @@ describe('AppComponent', () => {
     spyOn(component, 'goApi');
     fixture.detectChanges();
     let button = instance.querySelector('#apiBtn');
-    expect(button.textContent).toContain('API Tool');
+    expect(button.textContent).toContain('API Tool', 'button renders');
     button.click();
     fixture.detectChanges();
     expect(component.goApi).toHaveBeenCalled();
@@ -94,7 +94,7 @@ describe('AppComponent', () => {
     spyOn(component, 'goSearch');
     fixture.detectChanges();
     let button = instance.querySelector('#searchBtn');
-    expect(button.textContent).toContain('Search');
+    expect(button.textContent).toContain('Search', 'button renders');
     button.click();
     fixture.detectChanges();
     expect(component.goSearch).toHaveBeenCalled();
@@ -104,7 +104,7 @@ describe('AppComponent', () => {
     spyOn(component, 'goProfiles');
     fixture.detectChanges();
     let button = instance.querySelector('#profilesBtn');
-    expect(button.textContent).toContain('Profiles');
+    expect(button.textContent).toContain('Profiles', 'button renders');
     button.click();
     fixture.detectChanges();
     expect(component.goProfiles).toHaveBeenCalled();

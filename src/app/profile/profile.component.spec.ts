@@ -55,7 +55,7 @@ describe('ProfileComponent', () => {
 
   it('should display an image logo', () => {
     const img = instance.querySelector('#logoImg').src;
-    expect(img).toContain('liberty-mutual.gif');
+    expect(img).toContain('liberty-mutual.gif', 'display of logo');
   });
 
   it('should display firstName to profile page', async(() => {

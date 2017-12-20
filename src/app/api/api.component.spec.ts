@@ -31,7 +31,6 @@ describe('ApiComponent', () => {
   });
 
   it('should display api buttons', () => {
-    instance = fixture.elementRef.nativeElement;
     let button = instance.querySelector('#btnGet').textContent;
     expect(button).toBe('GET', 'button exists');
     button = instance.querySelector('#btnPost').textContent;
@@ -43,7 +42,6 @@ describe('ApiComponent', () => {
   });
 
   it('should accept a URL', () => {
-    instance = fixture.elementRef.nativeElement;
     let input = fixture.debugElement.query(By.css('#urlField')).nativeElement;
     input.value = 'http://google.com';
     fixture.detectChanges();

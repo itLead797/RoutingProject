@@ -27,6 +27,6 @@ describe('LogoComponent', () => {
 
   it('should display an image logo', () => {
     const img = instance.querySelector('#logoImg').src;
-    expect(img).toContain('liberty-mutual.gif');
+    expect(img).toContain('liberty-mutual.gif', 'display of logo');
   });
 });
