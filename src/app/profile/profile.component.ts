@@ -23,6 +23,8 @@ export class ProfileComponent implements OnInit {
     this.profile = this.profileService.getFiles();
     // console.log('Profile List' + JSON.stringify(this.profile));
     this.model = this.profile[0]; // see commented out ngOnInit
+    console.log(this.profile);
+    console.log(this.model);
     return this.profile;
   }
 

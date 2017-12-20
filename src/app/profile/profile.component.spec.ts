@@ -11,13 +11,22 @@ import { ProfileModel } from '../services/profile/profile.model';
 class profileServiceMock {
   data: ProfileModel[];
   public getFiles(): ProfileModel[] {
-    this.data = [{
+    this.data = [
+      {
       'firstName': 'john',
       'lastName': 'jones',
       'team': 'team1',
       'train': 'train1',
       'imageUrl': 'http://test'
-    }];
+    },
+    {
+      'firstName': 'jim',
+      'lastName': 'smith',
+      'team': 'team2',
+      'train': 'train2',
+      'imageUrl': 'http://test2'
+    }
+  ];
     return this.data;
   }
 }
