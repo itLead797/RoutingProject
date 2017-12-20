@@ -22,9 +22,10 @@ export const ROUTES: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'search', component: SearchComponent},
+  {path: 'profile', component: ProfileComponent},
   {path: 'profile/:username', component: ProfileComponent},
   {path: 'api', component: ApiComponent},
-  {path: 'profiles', component: ProfileComponent},
+  // {path: 'profiles', component: ProfileComponent},
   {path: '**', component: HomeComponent}
 ];
 @NgModule({

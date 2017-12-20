@@ -83,10 +83,10 @@ describe('AppComponent', () => {
     component.goSearch();
     expect(component.goSearch).toHaveBeenCalled();
   });
-  it('profiles button should work', () => {
-    spyOn(component, 'goProfiles');
-    component.goProfiles();
-    expect(component.goProfiles).toHaveBeenCalled();
+  it('profile button should work', () => {
+    spyOn(component, 'goProfile');
+    component.goProfile();
+    expect(component.goProfile).toHaveBeenCalled();
   });
 
   it('should render the HOME button', async(() => {
@@ -129,11 +129,11 @@ describe('AppComponent', () => {
     // expect(component.goSearch).toHaveBeenCalled();
   }));
 
-  it('should render the PROFILES button', async(() => {
-    spyOn(component, 'goProfiles');
+  it('should render the PROFILE button', async(() => {
+    spyOn(component, 'goProfile');
     fixture.detectChanges();
-    let button = instance.querySelector('#profilesBtn');
-    expect(button.textContent).toContain('Profiles', 'button renders');
+    let button = instance.querySelector('#profileBtn');
+    expect(button.textContent).toContain('Profile', 'button renders');
     // button.click();
     // fixture.detectChanges();
     // expect(component.goProfiles).toHaveBeenCalled();

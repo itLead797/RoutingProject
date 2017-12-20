@@ -15,7 +15,8 @@ export class ProfileComponent implements OnInit {
 
   model = new ProfileModel();
 
-  constructor(private profileService: ProfileService) {
+  constructor(private profileService: ProfileService,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit(): any {

@@ -27,7 +27,7 @@ export class AppComponent {
     this.router.navigate(['./api']);
   }
 
-  goProfiles() {
-    this.router.navigate(['./profiles']);
+  goProfile() {
+    this.router.navigate(['profile']);
   }
 }
