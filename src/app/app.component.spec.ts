@@ -47,7 +47,7 @@ describe('AppComponent', () => {
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.debugElement.componentInstance;
     instance = fixture.debugElement.nativeElement;
-
+    fixture.detectChanges();
   }));
 
   it('should create the app', async(() => {
@@ -91,51 +91,51 @@ describe('AppComponent', () => {
 
   it('should render the HOME button', async(() => {
     spyOn(component, 'goHome');
-    fixture.detectChanges();
     let button = instance.querySelector('#homeBtn');
     expect(button.textContent).toContain('Home', 'button renders');
-    // button.click();
-    // fixture.detectChanges();
-    // expect(component.goHome).toHaveBeenCalled();
   }));
 
   it('should render the LOGIN button', async(() => {
     spyOn(component, 'goLogin');
-    fixture.detectChanges();
     let button = instance.querySelector('#loginBtn');
     expect(button.textContent).toContain('Login', 'button renders');
-    // button.click();
-    // fixture.detectChanges();
-    // expect(component.goLogin).toHaveBeenCalled();
   }));
 
   it('should render the API-TOOL button', async(() => {
     spyOn(component, 'goApi');
-    fixture.detectChanges();
     let button = instance.querySelector('#apiBtn');
     expect(button.textContent).toContain('API Tool', 'button renders');
-    // button.click();
-    // fixture.detectChanges();
-    // expect(component.goApi).toHaveBeenCalled();
   }));
 
   it('should render the SEARCH button', async(() => {
     spyOn(component, 'goSearch');
-    fixture.detectChanges();
     let button = instance.querySelector('#searchBtn');
     expect(button.textContent).toContain('Search', 'button renders');
-    // button.click();
-    // fixture.detectChanges();
-    // expect(component.goSearch).toHaveBeenCalled();
   }));
 
   it('should render the PROFILE button', async(() => {
     spyOn(component, 'goProfile');
-    fixture.detectChanges();
     let button = instance.querySelector('#profileBtn');
     expect(button.textContent).toContain('Profile', 'button renders');
-    // button.click();
-    // fixture.detectChanges();
-    // expect(component.goProfiles).toHaveBeenCalled();
   }));
+
+  xit('UI Home button should call goHome function', async(() => {
+    spyOn(component, 'goHome');
+    let button = instance.querySelector('#homeBtn');
+    button.click();
+    fixture.whenStable().then(() => {
+      fixture.detectChanges();
+      expect(component.goHome).toHaveBeenCalled();
+    });
+  }));
+
+  xit('UI Login button should call goLogin function', async(() => {
+    spyOn(component, 'goLogin');
+    let button = instance.querySelector('#loginBtn');
+    button.click();
+    fixture.detectChanges();
+    expect(component.goLogin).toHaveBeenCalled();
+  }));
+
+
 });
