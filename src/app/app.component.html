@@ -1,20 +1,18 @@
+<h1>
+  <div>{{title}}</div>
+</h1>
 
-  <h1>
-    <div>{{title}}</div>
-  </h1>
 
+<div class="row">
+  <button id="homeBtn" class="btn btn-primary" [routerLink]="['home']">Home</button>
+  <button id="guideBtn" class="btn btn-primary" [routerLink]="['guide']">Guide</button>
+  <button id="loginBtn" class="btn btn-primary" [routerLink]="['login']">Login</button>
+  <button id="apiBtn" class="btn btn-primary" [routerLink]="['api']">API Tool</button>
+  <button id="searchBtn" class="btn btn-primary" [routerLink]="['search']">Search</button>
+  <button id="profileBtn" class="btn btn-primary" [routerLink]="['profile']">Profile</button>
+</div>
 
-  <div class="row">
-    <button id="homeBtn" class="btn btn-primary" [routerLink]="['home']">Home</button>
-    <button id="loginBtn" class="btn btn-primary" [routerLink]="['login']">Login</button>
-    <button id="apiBtn" class="btn btn-primary" [routerLink]="['api']">API Tool</button>
-    <button id="searchBtn" class="btn btn-primary" [routerLink]="['search']">Search</button>
-    <button id="profileBtn" class="btn btn-primary" [routerLink]="['profile']">Profile</button>
-    <!-- router link replaced ... (click)="goLogin()" -->
-  </div>
-
-  <!-- display of routed pages -->
-  <div class="appRouter">
-    <router-outlet></router-outlet>
-  </div>
-
+<!-- display of routed pages -->
+<div class="appRouter">
+  <router-outlet></router-outlet>
+</div>

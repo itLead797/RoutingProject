@@ -1,0 +1,19 @@
+h1 {
+  padding-top: 20px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+h3 {
+  text-decoration-line: underline;
+}
+
+div {
+  text-align: left;
+}
+
+label {
+  padding-left: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}

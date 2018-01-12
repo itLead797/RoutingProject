@@ -11,23 +11,4 @@ export class AppComponent {
 
   constructor(private router: Router) {}
 
-  goHome() {
-    this.router.navigate(['./']);
-  }
-
-  goLogin() {
-    this.router.navigate(['./login']);
-  }
-
-  goSearch() {
-    this.router.navigate(['./search']);
-  }
-
-  goApi() {
-    this.router.navigate(['./api']);
-  }
-
-  goProfile() {
-    this.router.navigate(['profile']);
-  }
 }

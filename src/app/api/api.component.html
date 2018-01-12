@@ -1,16 +1,20 @@
 <form>
   <div class="row">
     <button id="btnGet" class="btn btn-secondary" (click)="onGet()">GET</button>
+    <!--
     <button id="btnPost" class="btn btn-secondary" (click)="onPost()">POST</button>
     <button id="btnPut" class="btn btn-secondary" (click)="onPut()">PUT</button>
     <button id="btnDelete" class="btn btn-secondary" (click)="onDelete()">DELETE</button>
+    -->
   </div>
   <p></p>
 
 
   <div class="form-group">
     <input type="text" id="urlField" class="form-control" placeholder="URL" name="url" [(ngModel)]="request.url">
+    <!--
     <input id="requestBody" class="form-control" Placeholder="Request Body" name="requestBody" [(ngModel)]="request.body">
+    -->
   </div>
 
   <div class="form-group">
@@ -18,6 +22,8 @@
     <textarea id="returnValue" class="form-control" disabled>{{response}}</textarea>
   </div>
 
+  <!-- debug code
   <div>url = {{request.url}}</div>
   <div>body = {{request.body}}</div>
+  -->
 </form>
