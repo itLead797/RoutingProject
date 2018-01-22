@@ -15,7 +15,6 @@ import { LogoComponent } from './logo/logo.component';
 import { LoginService } from './services/login/login.service';
 import { ProfileService } from './services/profile/profile.service';
 import { LessonService } from './services/lesson/lesson.service';
-import { GuideComponent } from './guide/guide.component';
 
 export const ROUTES: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -25,7 +24,6 @@ export const ROUTES: Routes = [
   {path: 'profile', component: ProfileComponent},
   {path: 'profile/:username', component: ProfileComponent},
   {path: 'api', component: ApiComponent},
-  {path: 'guide', component: GuideComponent},
   {path: '**', component: HomeComponent}
 ];
 @NgModule({
@@ -37,7 +35,6 @@ export const ROUTES: Routes = [
     ProfileComponent,
     ApiComponent,
     LogoComponent,
-    GuideComponent
   ],
   imports: [
     BrowserModule,

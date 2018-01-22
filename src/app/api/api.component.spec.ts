@@ -33,12 +33,12 @@ describe('ApiComponent', () => {
   it('should display api buttons', () => {
     let button = instance.querySelector('#btnGet').textContent;
     expect(button).toBe('GET', 'button exists');
-    button = instance.querySelector('#btnPost').textContent;
-    expect(button).toBe('POST', 'button exists');
-    button = instance.querySelector('#btnPut').textContent;
-    expect(button).toBe('PUT', 'button exists');
-    button = instance.querySelector('#btnDelete').textContent;
-    expect(button).toBe('DELETE', 'button exists');
+    // button = instance.querySelector('#btnPost').textContent;
+    // expect(button).toBe('POST', 'button exists');
+    // button = instance.querySelector('#btnPut').textContent;
+    // expect(button).toBe('PUT', 'button exists');
+    // button = instance.querySelector('#btnDelete').textContent;
+    // expect(button).toBe('DELETE', 'button exists');
   });
 
   it('should accept a URL', () => {
@@ -75,7 +75,7 @@ describe('ApiComponent', () => {
     // console.log(component.response);
   }));
 
-  it('should perform a POST', async(() => {
+  xit('should perform a POST', async(() => {
     spyOn(component, 'onPost');
     let button = fixture.debugElement.query(By.css('#btnPost')).nativeElement;
     // let input = fixture.debugElement.query(By.css('#requestBody')).nativeElement;
@@ -86,7 +86,7 @@ describe('ApiComponent', () => {
     expect(component.onPost).toHaveBeenCalled();
   }));
 
-  it('should perform a PUT', async(() => {
+  xit('should perform a PUT', async(() => {
     spyOn(component, 'onPut');
     let button = fixture.debugElement.query(By.css('#btnPut')).nativeElement;
     // let input = fixture.debugElement.query(By.css('#requestBody')).nativeElement;
@@ -97,7 +97,7 @@ describe('ApiComponent', () => {
     expect(component.onPut).toHaveBeenCalled();
   }));
 
-  it('should perform a DELETE', async(() => {
+  xit('should perform a DELETE', async(() => {
     spyOn(component, 'onDelete');
     let button = fixture.debugElement.query(By.css('#btnDelete')).nativeElement;
     // let input = fixture.debugElement.query(By.css('#requestBody')).nativeElement;
